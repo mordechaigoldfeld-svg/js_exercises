@@ -33,12 +33,12 @@
 
 // task3
 
-function createCounter() {
-  let counter = 0;
-  function inc() {
-    return ++counter
-  }return inc
-}
+// function createCounter() {
+//   let counter = 0;
+//   function inc() {
+//     return ++counter
+//   }return inc
+// }
 
 
 // const count = createCounter()
@@ -151,6 +151,116 @@ function createCounter() {
 
 
 
+// ==========================
+// task11
+// function memoize(fn) {
+//   let cache = {}
+//   return function (...args) {
+//     const key = `${args}`;
+//     if (key in cache) {
+//       console.log("cache response");
+//       return cache[key];
+//     }
+//     const result = fn(...args);
+//     cache[key] = result;
+//     console.log("new response")
+//     return result;
+//   };
+// }
+
+// const fastAdd = memoize((a, b) => a + b);
+
+// console.log(fastAdd(1, 2));
+// console.log(fastAdd(1, 2));
+
+// ==================================
+// task12
+// function createStack() {
+//   const obj = {}
+//   function push(k, v) {
+//     obj[k] = v;
+//   }
+//   function pop(k) {
+//     delete obj[k];
+//   }
+//   function peek() {
+//     console.log(obj);
+//   }
+//   return {push,pop,peek}
+// }
 
 
+// const menage = createStack()
+
+// menage.push("test","moty")
+// menage.push("big","ok")
+// menage.peek()
+// menage.pop("big")
+// menage.peek()
+
+// ==================================
+
+// task13
+
+// function createIdGenerator() {
+//   let id = 1;
+//   return function () {
+//     console.log(id++);
+//   }
+// }
+
+// const gen = createIdGenerator();
+
+// gen();
+
+// gen();
+
+// gen();
+// gen();
+
+// ==========================
+// task14
+
+// ====================
+// task15
+function createBankAccount(initialBalance) {
+  let balance = initialBalance;
+  function getBalance() {
+    console.log(`your current balance:${balance}`)
+  }
+  function deposit(amount){
+    if (amount > 0) {
+      balance += amount;
+      console.log("success deposit")
+    } else{
+      console.log("cannot deposit negative amount")
+    }
+  }
+  function withdraw(amount) {
+    if (balance > amount) {
+      balance -= amount;
+      console.log("success withdraw")
+    } else {
+      console.log("cannot withdraw more than you have")
+    }
+  }return{getBalance,deposit,withdraw}
+}
+
+
+const moty_count=createBankAccount(100)
+const avi_count =createBankAccount(50)
+
+
+moty_count.getBalance()
+moty_count.deposit(-2)
+moty_count.deposit(2)
+moty_count.withdraw(345)
+moty_count.withdraw(50)
+moty_count.getBalance()
+
+
+avi_count.getBalance()
+avi_count.deposit(2)
+avi_count.withdraw(50)
+avi_count.getBalance()
 
