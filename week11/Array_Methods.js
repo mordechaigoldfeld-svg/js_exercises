@@ -77,7 +77,7 @@
 // =========================
 
 // task 8
-// const price = [20, 30, 50,150,200]
+// const price = [200, 30, 50,382]
 // const result = price
 //   .filter(p => p > 100)
 //   .map (p => p + p *0.1 )
@@ -96,66 +96,101 @@
 // =========================
 
 // task 10
-
-
+// const num = [10, 20, 30];
+// const total = num.reduce((acc, item) => {
+//   return acc * item
+// },1)
+// console.log(total)
 
 // =========================
 
 // task 11
-
-
+// const arr = ["a", "b", "c"];
+// const total = arr.reduce((acc, item) => {
+//   return acc + item
+// })
+// console.log(total)
 
 // =========================
 
 // task 12
-
-
+// const ages = [10,20,45,67,89]
+// const average = ages.reduce((acc, num) => {
+//   return acc + num / ages.length
+// },0)
+// console.log(average)
 
 // =========================
 
 // task 13
+// const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+// let obj = {}
+// const even = arr.filter((item) => {
+//   return item %2===0
+// })
+// const odd = arr.filter((item) => {
+//   return item % 2 !== 0
+// })
 
+// obj["even"] = even.length
+// obj["odd"] = odd.length
 
+// console.log(obj)
 
-// =========================
+// ==option2==
+// const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+// const result = arr.reduce((obj, num) => {
+//   if (num % 2 === 0) {
+//     obj["even"]+=1
+//   } else {
+//     obj["odd"]+=1
+//   }return obj
+// },{even:0,odd:0})
 
-// task
+// console.log(result)
 
-
-
-// =========================
-
-// task
-
-
-
-// =========================
-
-// task
-
-
-
-// =========================
-
-// task
-
-
-
-// =========================
-
-// task
 
 
 
 // =========================
 
-// task
+// task 14
+// const arr =[2,3,4,56,34,76,89]
+// const result = arr.find((item)=>item>50)
+// console.log(result)
+// =========================
+
+// task 15
 
 
 
 // =========================
 
-// task
+// task 16
+
+
+
+// =========================
+
+// task 17
+
+
+
+// =========================
+
+// task 18
+
+
+
+// =========================
+
+// task 19
+
+
+
+// =========================
+
+// task 20
 
 
 
