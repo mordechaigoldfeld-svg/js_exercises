@@ -86,7 +86,7 @@ export function showMenu() {
 
 
 export function idValidation(id) {
-  const obj =save_get.getAll()
+  const obj = save_get.getAll()
   const test = obj.find((val) => {
     return val.id === id
   })
@@ -103,10 +103,19 @@ export function statistics() {
   const obj = save_get.getAll()
   const totalCostumers = obj.length
   const activeAccounts = obj.filter((val) => {
-    return val=== true
+    return val.isActive
   })
+  const totalMoney = obj.reduce((total, val) => {
+    return total + val.balance
+  }, 0)
+  const averageBalance = totalMoney / obj.length
+  const highestBalanceList = obj.sort((a, b) => b.balance - a.balance)
+  const highestBalance = highestBalanceList[0]
   console.log("========== Statistics ==============")
-  console.log("total costumers:",totalCostumers)
-  console.log("active accounts",activeAccounts)
+  console.log("total costumers:", totalCostumers)
+  console.log("active accounts", activeAccounts.length)
+  console.log("total money", totalMoney)
+  console.log("average balance", averageBalance)
+  console.log("highest balance",highestBalance.balance)
 
 }
