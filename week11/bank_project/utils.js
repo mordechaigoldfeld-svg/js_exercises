@@ -1,6 +1,6 @@
 import rl from "readline-sync"
 import { createCustomer } from './costumer_manager.js';
-
+import { save_get } from './costumer_manager.js';
 
 
 function nameValidation(name) {
@@ -14,7 +14,7 @@ function nameValidation(name) {
 
 
 
-function balanceValidation(amount) {
+export function balanceValidation(amount) {
   if (typeof amount !== "number") {
     return false
   } else {
@@ -51,7 +51,7 @@ export function finallValidation() {
     if (accountTypeValid(accountType)) {
       const balance = rl.questionInt("enter your balance")
       if (balanceValidation(balance)) {
-        return createCustomer(name,accountType,balance)
+        return createCustomer(name, accountType, balance)
       } else {
         console.log("negative amount!!")
       }
@@ -71,6 +71,11 @@ export function showMenu() {
   console.log("0. to exit")
   console.log("1. to create a costumer")
   console.log("2. to see all costumers")
+  console.log("3. to see by id")
+  console.log("4. to deposit")
+  console.log("5. to withdraw")
+  console.log("6. to dectivate/close account")
+  console.log("7. to statistics")
 }
 
 
@@ -79,3 +84,29 @@ export function showMenu() {
 
 
 
+
+export function idValidation(id) {
+  const obj =save_get.getAll()
+  const test = obj.find((val) => {
+    return val.id === id
+  })
+  return test
+
+}
+
+
+// =============================
+
+
+
+export function statistics() {
+  const obj = save_get.getAll()
+  const totalCostumers = obj.length
+  const activeAccounts = obj.filter((val) => {
+    return val=== true
+  })
+  console.log("========== Statistics ==============")
+  console.log("total costumers:",totalCostumers)
+  console.log("active accounts",activeAccounts)
+
+}
