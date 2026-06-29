@@ -171,22 +171,40 @@ const fs = require("fs")
 
 // task13
 
-fs.writeFile("./data/report-title.txt","Daily Report","utf-8",(e)=>{
-    if(e) return console.log(e);
-    fs.writeFile("./data/report-body.txt","Everything is working","utf-8",(e)=>{
-        if(e) return console.log(e);
-        fs.readFile("./data/report-title.txt","utf-8",(e,dataReport)=>{
-            if(e) return console.log(e);
-            fs.readFile("./data/report-body.txt","utf-8",(e,dataBody)=>{
-                if(e) return console.log(e);
-                fs.writeFile("./data/final-report.txt",`${dataReport}\n${dataBody}`,"utf-8",(e)=>{
-                    if(e)return console.log(e);
-                    fs.readFile("./data/final-report.txt","utf-8",(e,data)=>{
-                        if(e) return console.log(e);
-                        console.log(data)
-                    })
-                })
-            })
-        })    
-    })
-})
+// fs.writeFile("./data/report-title.txt","Daily Report","utf-8",(e)=>{
+//     if(e) return console.log(e);
+//     fs.writeFile("./data/report-body.txt","Everything is working","utf-8",(e)=>{
+//         if(e) return console.log(e);
+//         fs.readFile("./data/report-title.txt","utf-8",(e,dataReport)=>{
+//             if(e) return console.log(e);
+//             fs.readFile("./data/report-body.txt","utf-8",(e,dataBody)=>{
+//                 if(e) return console.log(e);
+//                 fs.writeFile("./data/final-report.txt",`${dataReport}\n${dataBody}`,"utf-8",(e)=>{
+//                     if(e)return console.log(e);
+//                     fs.readFile("./data/final-report.txt","utf-8",(e,data)=>{
+//                         if(e) return console.log(e);
+//                         console.log(data)
+//                     })
+//                 })
+//             })
+//         })    
+//     })
+// })
+// ===============================
+
+// task14
+
+// fs.writeFile("./data/original.txt","Original file content","utf-8",(e)=>{
+//     if(e) return console.log(e);
+//     fs.readFile("./data/original.txt","utf-8",(e,data)=>{
+//         if(e) return console.log(e);
+//         fs.writeFile("./data/copy.txt",data,"utf-8",(e)=>{
+//             if(e) return console.log(e);
+//             fs.readFile("./data/copy.txt","utf-8",(e,data1)=>{
+//                 if(e) return console.log(e);
+//                 console.log(data1)
+//             })
+            
+//         })
+//     })
+// })
