@@ -29,7 +29,7 @@ export function readFile(){
 
 export function writeFile(content){
     return new Promise((res,rej)=>{
-     fs.writeFile("./data/movies.json",JSON.stringify(content),"utf-8",(err)=>{
+     fs.writeFile("./data/movies.json",JSON.stringify(content,null,2),"utf-8",(err)=>{
         if (err) return rej(err)
         res("successfuly created")
         })

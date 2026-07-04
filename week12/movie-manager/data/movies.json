@@ -1,1 +1,30 @@
-[{"id":1,"title":"Inception","genre":"Sci-Fi","year":2010,"rating":8.8}]
+[
+  {
+    "id": 2,
+    "title": "titanic",
+    "genre": "fiction",
+    "year": 1999,
+    "rating": 9
+  },
+  {
+    "id": 1,
+    "title": "test moty",
+    "genre": "comedy",
+    "year": 2010,
+    "rating": 8
+  },
+  {
+    "id": 3,
+    "title": "moty",
+    "genre": "comedy",
+    "year": 2022,
+    "rating": 8
+  },
+  {
+    "id": 4,
+    "title": "moty",
+    "genre": "comedy",
+    "year": 2022,
+    "rating": 2
+  }
+]
