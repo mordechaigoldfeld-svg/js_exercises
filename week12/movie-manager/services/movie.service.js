@@ -18,13 +18,7 @@ export async function showAllMovies() {
     
 }
 
-// showAllMovies()
 
-
-
-// async function createId(){
-
-// }
     
 
 export async function createMovie(body) {
@@ -52,14 +46,6 @@ export async function createMovie(body) {
     
 }
 
-// createMovie({  
-// "title": "Inception", 
-// "genre": "Sci-Fi", 
-// "year": 2010, 
-// "rating": 8.8 
-// } 
-
-// )
 
 
 
@@ -83,7 +69,7 @@ export async function showById(id) {
     
 }
 
-// console.log(await showById(1))
+
 
 
 
@@ -171,7 +157,7 @@ export async function updateRate(id,rate) {
     
 }
 
-// updateRate(45,3)
+
 
 export async function searchByName(name){
     try{
@@ -192,7 +178,7 @@ export async function searchByName(name){
 }
 
 
-// searchByName("t")
+
 
 
 
@@ -218,16 +204,13 @@ export async function sortByGenre(genre){
 }
 
 
-// sortByGenre("others")
 
 
 
 export async function statistics() {
     try{
         const movies = await readFile();
-        // const averageRate  = movies.rating.reduce((acc,mov)=>{
-        //     return (acc + mov)/movies.length
-        // })
+       
         const averageRate = movies.map((mov)=>{return mov.rating})
         .reduce((acc,rate)=>{return acc +rate})/movies.length;
         const betterRate = movies.map((mov)=>{return mov.rating})
@@ -244,4 +227,4 @@ export async function statistics() {
     
 }
 
-// console.log(await statistics())
+

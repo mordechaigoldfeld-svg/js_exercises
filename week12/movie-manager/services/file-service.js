@@ -14,13 +14,6 @@ export function readFile(){
 
 
 
-// const promise = readFile()
-// promise.then((res)=>{
-//     console.log(res)
-// }).catch((rej)=>{
-//     console.log(rej)
-// })
-
 
 
 
@@ -35,27 +28,6 @@ export function writeFile(content){
         })
     })
 }
-
-
-// const example =[ 
-// { 
-// "id": 1, 
-// "title": "Inception", 
-// "genre": "Sci-Fi", 
-// "year": 2010, 
-// "rating": 8.8 
-// } 
-// ] 
-
-
-// writeFile(example)
-// .then((data)=>{
-//     console.log(data)
-// }).catch((e)=>{
-//     console.log(e)
-// })
-
-
 
 
 

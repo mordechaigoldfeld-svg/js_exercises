@@ -81,11 +81,3 @@ export function getBody(){
 }
 
 
-// createMovie(getBody())
-
-// const newEntry = getBody();
-// console.log("\n--- Successfully Created! ---");
-// console.log(newEntry);
-
-
-
