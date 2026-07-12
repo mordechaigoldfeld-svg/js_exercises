@@ -8,8 +8,8 @@
   {
     "id": 2,
     "customer": "moty",
-    "status": "NEW",
-    "table": 5
+    "status": "PREPARING",
+    "table": 4
   },
   {
     "id": 3,
@@ -19,13 +19,13 @@
   },
   {
     "id": 4,
-    "customer": "moty",
-    "status": "NEW",
+    "customer": "avi",
+    "status": "PREPARING",
     "table": 5
   },
   {
     "id": 5,
-    "customer": "moty",
+    "customer": "yanki",
     "status": "NEW",
     "table": 5
   },
@@ -38,7 +38,7 @@
   {
     "id": 7,
     "customer": "moty",
-    "status": "NEW",
+    "status": "PREPARING",
     "table": 5
   },
   {
