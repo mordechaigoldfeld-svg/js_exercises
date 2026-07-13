@@ -1,5 +1,6 @@
 import { readData, writeToJson } from "../repo/data_handler.js"
 import { incremenrId } from "../utils/extras.js"
+import { validStatus } from "../utils/validator.js"
 
 const dataPath = "./data/orders.json"
 
@@ -50,7 +51,10 @@ export async function removeOrder(id){
 
 export async function updateStatus(id,status) {
     try{
-
+        const valid = await validStatus(id,status)
+        if(valid[0] !== 200){
+            return [valid[0],valid[1]]
+        }
         const orders =  await readData(dataPath)
         const current = orders.find((order)=>{return order.id === +id})
         current.status = status

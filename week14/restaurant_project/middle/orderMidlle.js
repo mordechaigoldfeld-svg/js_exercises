@@ -28,3 +28,13 @@ export async function idValidation(req,res,next){
         console.log(err)
     }
 }
+
+
+
+
+export function logger(req, res, next) {
+     const requestTime = new Date()//.toISOString()
+    console.log(requestTime)
+    req.TIME = requestTime
+    next()
+}
