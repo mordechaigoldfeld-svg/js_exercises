@@ -1,6 +1,6 @@
 import { bodyValidation } from "../middle/orderMidlle.js";
 import { writeToJson,readData } from "../repo/data_handler.js";
-import { removeOrder, isValidBody, search,updateStatus} from "../services/service_order.js";
+import { removeOrder, isValidBody, search,updateStatus, getById} from "../services/service_order.js";
 
 
 
@@ -59,4 +59,15 @@ export async function update(req,res){
     }
 }
 
+export async function byId(req,res) {
+    try{
+        const id = req.params.id
+        const response = await getById(id)
+        res.status(response[0]).json(response[1])
 
+
+    }catch(err){
+        console.log(err)
+    }
+    
+}

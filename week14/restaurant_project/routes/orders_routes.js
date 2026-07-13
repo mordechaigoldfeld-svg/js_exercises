@@ -1,5 +1,5 @@
 import express from "express"
-import { getBody,getOrders,deleteOrder,update } from "../controler/cntrl_orders.js"
+import { getBody,getOrders,deleteOrder,update,byId } from "../controler/cntrl_orders.js"
 import { bodyValidation,idValidation } from "../middle/orderMidlle.js"
 
 
@@ -12,6 +12,8 @@ export default router
 router.post('/',bodyValidation,getBody)
 
 router.get("/",getOrders)
+
+router.get("/:id",byId)
 
 router.patch("/:id",idValidation,update)
 

@@ -65,3 +65,19 @@ export async function updateStatus(id,status) {
         console.log(err)
     }
 }
+
+
+export async function getById(id) {
+    try{
+        const orders = await readData(dataPath)
+        const current = orders.find((order)=>{return order.id === +id})
+        if(!current){
+            return [404,"not found"]
+        }
+        return [200,current]
+
+    }catch(err){
+        console.log(err)
+    }
+    
+}
