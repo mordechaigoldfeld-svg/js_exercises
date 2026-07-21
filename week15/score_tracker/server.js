@@ -1,35 +1,17 @@
-import "dotenv/config"
-import { MongoClient } from "mongodb"
 import express from "express"
-
-const MONGO_URI = process.env.MONGO_URI
+import "dotenv/config"
+import { createScore } from "./controler/player_cntrl.js"
+import { bodyExists } from "./middle/valid.js"
+import scoreRouter from "./routes/scores.js"
 
 const app = express()
 
 const PORT  = process.env.PORT
 
-const connection = new MongoClient(MONGO_URI)
-console.log('this is my MONGO URI :',MONGO_URI);
-
-
-try{
-    await connection.connect()
-    console.log("connected...");
-    
-
-}catch(err){
-    console.log(err)
-}
-
-
-
-
-const db = connection.db("score_tracker");
-
-
-const players = db.collection("players");
 
 app.use(express.json())
+
+app.use("/scores",bodyExists,scoreRouter)
 
 
 app.listen(PORT,()=>{
