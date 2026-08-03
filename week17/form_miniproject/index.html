@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>register project</title>
+</head>
+
+<body>
+    <form action="http://localhost:8080/register" method="POST">
+        <h1>register new user</h1>
+        <label for="username">username:</label>
+        <input type="text" id="username" name="username" required placeholder="enter your name">
+        <hr>
+        <label for="email">email:</label>
+        <input type="email" id="email" name="email" required placeholder="example@gmail.com">
+        <hr>
+        <label for="password">password:</label>
+        <input type="password" id="password" name="password" required minlength="8" placeholder="********">
+        <hr>
+        <label for="age">age:</label>
+        <input type="number" id="age" name="age" required placeholder="enter your age">
+        <hr>
+        <label for="role">role:</label>
+        <select name="role" id="role">
+            <option value="admin">admin</option>
+            <option value="user">user</option>
+        </select>
+        <hr>
+        <label for="accept terms">accept terms</label>
+        <input type="checkbox" name="accept terms" id="accept terms" value="accept" required>
+        <hr>
+        <button type="submit">הרשמה</button>
+
+    </form>
+
+</body>
+
+</html>
