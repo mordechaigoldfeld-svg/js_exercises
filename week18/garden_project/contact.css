@@ -1,0 +1,335 @@
+:root {
+    --main-color: rgb(7, 242, 206);
+    --nav-color: rgb(248 184 195);
+    --box-color: rgb(218, 208, 208);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+
+body {
+    background-color: var(--nav-color);
+    height: 100vh;
+}
+
+.grid-container {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 9fr 1fr;
+    grid-template-areas:
+        "nav-bar"
+        "main-content"
+        "footer";
+
+}
+
+
+.nav-bar {
+    grid-area: nav-bar;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    color: blueviolet;
+
+}
+
+
+.contact-link {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+
+.bait-link {
+
+    text-decoration: none;
+    color: black;
+}
+
+#b-link-c {
+
+    /* font-size: larger; */
+    color: gray;
+}
+
+#b-link-c:hover {
+
+    font-size: larger;
+    color: blue;
+}
+
+
+img {
+
+
+    height: 100px;
+    width: 100px;
+
+}
+
+
+.over-bord {
+
+    overflow: auto;
+}
+
+.main-content {
+
+    background-color: var(--main-color);
+    grid-area: main-content;
+    display: grid;
+    grid-template-rows: 2fr 2fr;
+    padding: 20px;
+    gap: 20px;
+    height: 100vh;
+    /* overflow: auto; */
+}
+
+
+.boxes {
+
+    background-color: var(--box-color);
+    border-radius: 10px;
+    box-shadow: 6px 6px 17px black;
+    padding: 20px;
+    text-align: center;
+    overflow: auto;
+}
+
+.adress-container {
+
+    margin-top: 20px;
+
+}
+
+.adress-cards {
+
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+
+.adress-card {
+
+    color: blue;
+    background-color: var(--nav-color);
+    padding: 50px;
+    border-radius: 6px;
+    box-shadow: 5px 5px 18px black;
+
+}
+
+h3 {
+    color: black;
+}
+
+/* .contact-card{
+
+background-color:var(--nav-color);
+padding: 30px;
+border-radius: 6px;
+box-shadow: 5px 5px 18px black;
+
+
+} */
+
+#name {
+
+    padding: 10px;
+    text-decoration: none;
+    border: none;
+    border-radius: 6px;
+    background-color: var(--nav-color);
+    box-shadow: 5px 5px 18px black;
+}
+
+#name:hover {
+
+    background-color: var(--main-color);
+
+}
+
+#email {
+
+    padding: 10px;
+    text-decoration: none;
+    border: none;
+    border-radius: 6px;
+    background-color: var(--nav-color);
+    box-shadow: 5px 5px 18px black;
+
+
+}
+
+#email:hover {
+
+    background-color: var(--main-color);
+}
+
+
+#question {
+
+
+    padding: 10px;
+    text-decoration: none;
+    border: none;
+    border-radius: 6px;
+    background-color: var(--nav-color);
+    box-shadow: 5px 5px 18px black;
+
+}
+
+#question:hover {
+
+    background-color: var(--main-color);
+}
+
+#content {
+    padding: 20px;
+    text-decoration: none;
+    border: none;
+    border-radius: 6px;
+    background-color: var(--nav-color);
+    box-shadow: 5px 5px 18px black;
+}
+
+#content:hover {
+    background-color: var(--main-color);
+}
+
+
+
+.contact-cards {
+
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    overflow: auto;
+
+}
+
+.send {
+
+    margin-top: 20px;
+    padding: 20px;
+    border: none;
+    border-radius: 50px;
+    background-color: var(--main-color);
+    box-shadow: 5px 5px 18px black;
+}
+
+.send:hover {
+
+    background-color: blueviolet;
+    color: white;
+}
+
+.send:active {
+
+    background-color: gray;
+}
+
+
+
+
+
+
+
+
+
+.footer {
+
+    grid-area: footer;
+
+}
+
+.footer-content {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.p-footer {
+
+    font-size: small;
+    color: blueviolet;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+.spinning-flower {
+    display: inline-block; 
+    animation: spin 3s linear infinite; 
+}
+
+
+
+@media(width >= 768px){
+
+.adress-cards {
+
+    
+    grid-template-columns: 1fr 1fr;
+
+}
+    
+
+
+}
+
+
+@media(width>=1024px){
+
+.nav-bar {
+    grid-area: nav-bar;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items:center;
+    align-items: center;
+    color: blueviolet;
+    gap: 100px;
+
+}
+
+
+.contact-link {
+    display: flex;
+    justify-content: center;
+    font-size: large;
+    gap: 10px;
+}
+
+
+img{
+
+    width: 200px;
+    height: 200px;
+}
+
+}
+
+/* .contact-cards{
+
+
+    display: grid;
+    grid-template-columns: 1fr 1fr
+
+
+} */
